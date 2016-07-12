@@ -1,0 +1,38 @@
+{
+    "name": "basket",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Gruntfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "andy zheng",
+    "license": "ISC",
+    "dependencies": {
+        "jquery": "2.1.x",
+        "bootstrap-sass": "^3.3.6"
+    },
+    "devDependencies": {
+       
+        "browserify": "^13.0.1",
+        "browserify-shim": "^3.8.12",
+        "grunt": "^1.0.1",
+        "grunt-browserify": "^5.0.0",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-cssmin": "^1.0.1",
+        "grunt-contrib-sass": "^1.0.0",
+        "grunt-contrib-uglify": "^1.0.1",
+        "grunt-contrib-watch": "^1.0.0"
+    },
+    "browserify": {
+        "transform": ["browserify-shim"]
+    },
+    "browser": {
+        "bootstrap": "/node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"
+    },
+    "browserify-shim": {
+        "bootstrap": {
+            "depends": ["jquery:jQuery"]
+        }
+    }
+}
